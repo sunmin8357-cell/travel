@@ -1,0 +1,21 @@
+{
+  "short_name": "여행추천",
+  "name": "나만의 맞춤 여행지 추천",
+  "description": "여행 취향 테스트 및 맞춤 여행지 추천 서비스",
+  "icons": [
+    {
+      "src": "/static/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "display": "standalone"
+}
