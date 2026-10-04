@@ -7,7 +7,8 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
       <!-- 마크다운 문법을 깔끔한 HTML로 렌더링하기 위한 라이브러리 -->
       <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    </head>
+   <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+<meta name="theme-color" content="#3b82f6"> </head>
     <body>
       <div class="app-container">
         <!-- 헤더 섹션 -->
@@ -125,6 +126,12 @@
         </main>
       </div>
       <!-- 프론트엔드 제어 스크립트 연결 -->
-      <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/app.js') }}"></script<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register("{{ url_for('static', filename='sw.js') }}");
+    });
+  }
+</script>
     </body>
     </html>
